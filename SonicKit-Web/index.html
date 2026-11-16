@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8faff">
+  <meta name="description" content="SonicKit，面向 Windows 的音频创作工作台。AI 配音、音频剪辑、字幕识别与 CapCut 草稿管理，在一个工作台中完成。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SonicKit · 让声音，顺畅成片">
+  <meta property="og:description" content="把文案、配音、字幕和草稿，放进同一个工作台。">
+  <meta property="og:url" content="https://www.sonickit.top/">
+  <meta property="og:image" content="https://www.sonickit.top/images/01-audio.png">
+  <title>SonicKit · 让声音，顺畅成片</title>
+  <link rel="canonical" href="https://www.sonickit.top/">
+  <link rel="icon" href="images/icon.svg" type="image/svg+xml">
+  <link rel="preload" href="images/01-audio.png" as="image">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body id="top">
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></symbol>
+    <symbol id="i-zip" viewBox="0 0 24 24"><path d="M14 3H5v18h14V8l-5-5Zm0 0v5h5M9 3v2m0 2v2m0 2v2m0 2v3h3v-3H9Z"/></symbol>
+    <symbol id="i-wave" viewBox="0 0 24 24"><path d="M3 10v4m4-8v12m5-16v20m5-16v12m4-8v4"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="13" rx="4"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3m-4 0h8"/></symbol>
+    <symbol id="i-text" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM7 9h10M7 13h7m-7 4h4"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 10 6-10 6L2 9l10-6ZM2 13l10 6 10-6M2 17l10 6 10-6"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.3-4.3-2-6-2.5M15 22v-3.4c.1-1-.2-1.7-.7-2.2 2.7-.3 5.5-1.3 5.5-6A4.7 4.7 0 0 0 18.5 7a4.4 4.4 0 0 0-.1-3.4s-1-.3-3.5 1.3a12 12 0 0 0-6.3 0C6.2 3.3 5.2 3.6 5.2 3.6A4.4 4.4 0 0 0 5.1 7a4.7 4.7 0 0 0-1.3 3.3c0 4.7 2.8 5.7 5.5 6-.4.4-.7 1.1-.7 2.2V22"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M14 4h6v6m0-6-7 7M10 20H4v-6m0 6 7-7"/></symbol>
+  </svg>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="header">
+    <nav class="nav wrap" aria-label="主导航">
+      <a class="brand" href="#top" aria-label="SonicKit 首页"><img src="images/icon.svg" width="32" height="32" alt=""><span>SonicKit<span class="brand-dot">.</span></span></a>
+      <div class="nav-links"><a href="#workspace">工作台</a><a href="#features">功能</a><a href="#download">下载</a></div>
+      <a class="nav-github" href="https://github.com/ChatTMD/Sonickit" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 查看 SonicKit"><svg class="icon"><use href="#i-github"/></svg><span>GitHub</span><span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span>为创作而生的 Windows 工作台</div>
+      <h1 id="hero-title">让声音，<br><span>顺畅成片。</span></h1>
+      <p class="hero-description">把文案、配音、字幕和草稿，<br class="mobile-break">放进同一个工作台。</p>
+      <div class="hero-actions">
+        <a class="button button-primary" data-download="exe" href="https://github.com/ChatTMD/Sonickit/releases"><svg class="icon"><use href="#i-download"/></svg><span>下载安装版</span><span class="button-version" data-version></span></a>
+        <a class="button button-secondary" data-download="zip" href="https://github.com/ChatTMD/Sonickit/releases"><svg class="icon"><use href="#i-zip"/></svg><span>下载便携版</span><span class="button-version" data-version></span></a>
+      </div>
+      <div class="hero-meta"><span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 2.4 7 1.6v5.8H1V2.4Zm7-1L15 .4v7H8v-6ZM1 8.4h6v5.8l-6-.8v-5Zm7 0h7v7l-7-1v-6Z"/></svg>Windows x64</span><span class="meta-separator" aria-hidden="true"></span><span>EXE 安装版 / ZIP 便携版</span></div>
+
+      <div class="workspace" id="workspace">
+        <div class="workspace-bar">
+          <div class="workspace-label"><span class="small-dot" aria-hidden="true"></span>一个工作台，完整的创作流程</div>
+          <span class="workspace-index" id="screen-index" aria-hidden="true">01 / 04</span>
+        </div>
+        <div class="screen-tabs" role="tablist" aria-label="软件功能预览">
+          <button id="tab-audio" class="screen-tab" type="button" role="tab" aria-selected="true" aria-controls="screen-panel" data-screen="audio"><svg class="icon"><use href="#i-wave"/></svg>音频剪辑</button>
+          <button id="tab-generation" class="screen-tab" type="button" role="tab" aria-selected="false" aria-controls="screen-panel" tabindex="-1" data-screen="generation"><svg class="icon"><use href="#i-mic"/></svg>AI 配音</button>
+          <button id="tab-subtitles" class="screen-tab" type="button" role="tab" aria-selected="false" aria-controls="screen-panel" tabindex="-1" data-screen="subtitles"><svg class="icon"><use href="#i-text"/></svg>字幕识别</button>
+          <button id="tab-drafts" class="screen-tab" type="button" role="tab" aria-selected="false" aria-controls="screen-panel" tabindex="-1" data-screen="drafts"><svg class="icon"><use href="#i-layers"/></svg>草稿管理</button>
+        </div>
+        <div class="screen-panel" id="screen-panel" role="tabpanel" aria-labelledby="tab-audio" tabindex="0">
+          <button class="screen-zoom" id="screen-zoom" type="button" aria-label="放大音频剪辑界面截图"><img id="screen-image" src="images/01-audio.png" alt="SonicKit 音频剪辑界面，包含文件列表、波形预览与气口剪辑参数" width="1440" height="900" fetchpriority="high"><span class="expand-hint" aria-hidden="true"><svg class="icon"><use href="#i-expand"/></svg></span></button>
+        </div>
+        <div class="workspace-caption"><p id="screen-caption">看见每一处停顿，保留表达的节奏。</p><span>SONICKIT WORKSPACE</span></div>
+      </div>
+    </section>
+
+    <section class="features wrap" id="features" aria-labelledby="features-title">
+      <div class="section-heading"><div><p class="eyebrow section-eyebrow">LESS SWITCHING. MORE CREATING.</p><h2 id="features-title">少一点切换，<br>多一点创作。</h2></div><p class="section-description">从一份文案到一段配音，<br>让素材自然衔接下一步。</p></div>
+      <div class="feature-grid">
+        <article class="feature"><span class="feature-number">01</span><svg class="feature-icon icon"><use href="#i-mic"/></svg><h3>文字，成为声音</h3><p>选择音色、调整语速与停顿。<br>AI 配音与音色克隆，融入日常创作。</p><span class="feature-note">AI 配音 · 音色管理</span></article>
+        <article class="feature"><span class="feature-number">02</span><svg class="feature-icon icon"><use href="#i-wave"/></svg><h3>听感，恰到好处</h3><p>在波形上预览、调整气口，<br>批量转换音视频，识别并校对字幕。</p><span class="feature-note">气口剪辑 · 格式转换 · 字幕识别</span></article>
+        <article class="feature"><span class="feature-number">03</span><svg class="feature-icon icon"><use href="#i-layers"/></svg><h3>素材，各就其位</h3><p>整理文案和音频，预览时间线，<br>把配音与文字衔接到 CapCut 草稿。</p><span class="feature-note">文案管理 · 音频库 · 草稿导入</span></article>
+      </div>
+    </section>
+
+    <section class="download-section" id="download" aria-labelledby="download-title">
+      <div class="download-inner wrap">
+        <div class="download-copy"><img src="images/icon.svg" width="54" height="54" alt="" loading="lazy"><p class="eyebrow">YOUR NEXT CREATION STARTS HERE.</p><h2 id="download-title">下一段好声音，<br>从这里开始。</h2><p>选择适合你的方式，打开 SonicKit。</p></div>
+        <div class="download-options">
+          <a class="download-option" data-download="exe" href="https://github.com/ChatTMD/Sonickit/releases"><span class="package-icon"><svg class="icon"><use href="#i-download"/></svg></span><span class="package-copy"><strong>下载安装版 <span data-version></span></strong><span>Windows x64 <span aria-hidden="true">·</span> EXE</span></span><svg class="icon package-arrow"><use href="#i-arrow"/></svg></a>
+          <a class="download-option" data-download="zip" href="https://github.com/ChatTMD/Sonickit/releases"><span class="package-icon"><svg class="icon"><use href="#i-zip"/></svg></span><span class="package-copy"><strong>下载便携版 <span data-version></span></strong><span>解压即用 <span aria-hidden="true">·</span> ZIP</span></span><svg class="icon package-arrow"><use href="#i-arrow"/></svg></a>
+          <a class="release-link" href="https://github.com/ChatTMD/Sonickit/releases" target="_blank" rel="noopener noreferrer">版本记录 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap"><a class="brand footer-brand" href="#top"><img src="images/icon.svg" width="24" height="24" alt=""><span>SonicKit<span class="brand-dot">.</span></span></a><p>为每一份灵感，找到声音。</p><a href="https://github.com/ChatTMD/Sonickit" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><span class="copyright">© <span id="year">2026</span> SonicKit</span></footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="软件界面大图"><button class="lightbox-close" id="lightbox-close" type="button" aria-label="关闭大图"><svg class="icon"><use href="#i-close"/></svg></button><img id="lightbox-image" alt="" width="1440" height="900"></dialog>
+  <div class="download-notice" id="download-notice" role="status" aria-live="polite" hidden><p id="notice-message"></p><a href="https://github.com/ChatTMD/Sonickit/releases" target="_blank" rel="noopener noreferrer">打开 GitHub 发行页 ↗</a><button id="notice-close" type="button" aria-label="关闭下载提示"><svg class="icon"><use href="#i-close"/></svg></button></div>
+  <noscript><p class="noscript-note">启用 JavaScript 可直接下载最新版本，或访问 <a href="https://github.com/ChatTMD/Sonickit/releases">GitHub 发行页</a>。</p></noscript>
+</body>
+</html>
