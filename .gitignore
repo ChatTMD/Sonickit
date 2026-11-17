@@ -1,0 +1,60 @@
+# Local editor state; keep the shared website preview task.
+.vscode/*
+!.vscode/tasks.json
+.idea/
+*.suo
+*.user
+
+# Python preview caches and local environments.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.preview.lock
+
+# Node dependencies, caches and generated output.
+node_modules/
+.npm/
+.cache/
+coverage/
+dist/
+build/
+*.tsbuildinfo
+
+# Cloudflare local state and private environment files.
+.wrangler/
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+!.dev.vars.*.example
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Logs, temporary files and editor backups.
+logs/
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# Desktop release packages belong in GitHub Releases.
+/SonicKit-*.exe
+/SonicKit-*.msi
+/SonicKit-*.zip
+/SonicKit-*.7z
+
+# Operating system metadata.
+.DS_Store
+Thumbs.db
+Desktop.ini
