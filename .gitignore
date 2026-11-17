@@ -1,3 +1,6 @@
+# Local deployment instructions.
+/上传说明.md
+
 # Local editor state; keep the shared website preview task.
 .vscode/*
 !.vscode/tasks.json

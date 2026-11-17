@@ -10,7 +10,7 @@
 
 `音频剪辑` · `字幕识别` · `文案管理` · `AI 配音` · `音色克隆` · `草稿管理` · `局域网访问`
 
-[软件官网](https://www.sonickit.top/) · [下载正式版本](https://github.com/ChatTMD/Sonickit/releases) · [官网预览与部署](上传说明.md)
+[软件官网](https://www.sonickit.top/) · [下载正式版本](https://github.com/ChatTMD/Sonickit/releases)
 
 [音频处理](#音频处理) · [字幕识别](#字幕识别) · [文案处理](#文案处理) · [音频生成与音色管理](#音频生成与音色管理) · [草稿管理](#草稿管理) · [局域网络](#局域网络) · [模型管理](#模型管理) · [系统设置](#系统设置)
 
