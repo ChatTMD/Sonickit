@@ -1,0 +1,68 @@
+{
+  "captured": "2026-11-17",
+  "theme": "云雾白",
+  "assembly_sha256": "5e8df8e43883c05b38fa7a20ce7c2382622cf811f4b38f6cd24b47f8a917fb4a",
+  "method": "Current desktop controls rendered in an isolated demo directory using the existing desktop assembly.",
+  "screens": [
+    {
+      "src": "images/01-audio.png",
+      "sha256": "4daeaed33acd09d8d588c6f71a688500a742ad05ef35f74af5c70b387acb1bac",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "images/02-subtitles.png",
+      "sha256": "e6b3c84d0128e76af65553db83a6d233fb505d8176b5117519bde3db571df71c",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "images/03-copywriting.png",
+      "sha256": "761d0394616d81e9ed2481be966627d54ac1b8b940a98a47bd48f5a0e4c35f74",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "images/04-generation.png",
+      "sha256": "d279c5e3915987da13fbc4cc54fdfd64ed93e225bf13ba511e38d0d99cca4c99",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "images/05-drafts.png",
+      "sha256": "19c6231fdc01e480e7e85835a9fa0022dd3ace3caf25c94c85ac2030136f3635",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "images/06-timeline.png",
+      "sha256": "3be85dd23044ed5f97e2eacc364f59f08c389e81abc00f081f73140ac6f16c4b",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "images/07-lan.png",
+      "sha256": "3d129dcb8d79166fba0fc689674fc8a63892e3f72fcb0cb2c83a542adc4ed63b",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "images/08-models.png",
+      "sha256": "0923a981104cc181250a7caf2f86084fd65da349932c1277bb928e336a41473a",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "images/09-settings.png",
+      "sha256": "0b75449b828089d5be910f4aeb62e5ad66e099f4e803a0bec4f2a29558544227",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "images/10-draft-import.png",
+      "sha256": "f2018a5098748708b19e0b84fdf67c3081f251e9721017b7efb5805bc114e32f",
+      "width": 1440,
+      "height": 900
+    }
+  ]
+}

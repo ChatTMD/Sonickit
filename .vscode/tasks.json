@@ -9,7 +9,7 @@
       "options": { "cwd": "${workspaceFolder}" },
       "problemMatcher": [],
       "runOptions": { "instanceLimit": 1 },
-      "presentation": { "reveal": "silent", "panel": "dedicated", "clear": false }
+      "presentation": { "reveal": "always", "panel": "dedicated", "clear": false }
     }
   ]
 }

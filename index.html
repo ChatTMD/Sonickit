@@ -9,13 +9,14 @@
   <meta property="og:title" content="SonicKit · 让声音，顺畅成片">
   <meta property="og:description" content="把文案、配音、字幕和草稿，放进同一个工作台。">
   <meta property="og:url" content="https://www.sonickit.top/">
-  <meta property="og:image" content="https://www.sonickit.top/images/01-audio.png">
+  <meta property="og:image" content="https://www.sonickit.top/images/01-audio.png?v=20261117">
   <title>SonicKit · 让声音，顺畅成片</title>
   <link rel="canonical" href="https://www.sonickit.top/">
   <link rel="icon" href="images/icon.svg" type="image/svg+xml">
-  <link rel="preload" href="images/01-audio.png" as="image">
+  <link rel="preload" href="images/01-audio.png?v=20261117" as="image">
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="app.js"></script>
+  <script type="module" src="voice-previews.js"></script>
 </head>
 <body id="top">
   <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -35,7 +36,7 @@
   <header class="header">
     <nav class="nav wrap" aria-label="主导航">
       <a class="brand" href="#top" aria-label="SonicKit 首页"><img src="images/icon.svg" width="32" height="32" alt=""><span>SonicKit<span class="brand-dot">.</span></span></a>
-      <div class="nav-links"><a href="#workspace">工作台</a><a href="#features">功能</a><a href="#download">下载</a></div>
+      <div class="nav-links"><a href="#workspace">工作台</a><a href="#features">功能</a><a href="#voices">试听</a><a href="#download">下载</a></div>
       <a class="nav-github" href="https://github.com/ChatTMD/Sonickit" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 查看 SonicKit"><svg class="icon"><use href="#i-github"/></svg><span>GitHub</span><span aria-hidden="true">↗</span></a>
     </nav>
   </header>
@@ -63,7 +64,7 @@
           <button id="tab-drafts" class="screen-tab" type="button" role="tab" aria-selected="false" aria-controls="screen-panel" tabindex="-1" data-screen="drafts"><svg class="icon"><use href="#i-layers"/></svg>草稿管理</button>
         </div>
         <div class="screen-panel" id="screen-panel" role="tabpanel" aria-labelledby="tab-audio" tabindex="0">
-          <button class="screen-zoom" id="screen-zoom" type="button" aria-label="放大音频剪辑界面截图"><img id="screen-image" src="images/01-audio.png" alt="SonicKit 音频剪辑界面，包含文件列表、波形预览与气口剪辑参数" width="1440" height="900" fetchpriority="high"><span class="expand-hint" aria-hidden="true"><svg class="icon"><use href="#i-expand"/></svg></span></button>
+          <button class="screen-zoom" id="screen-zoom" type="button" aria-label="放大音频剪辑界面截图"><img id="screen-image" src="images/01-audio.png?v=20261117" alt="SonicKit 音频剪辑界面，包含文件列表、波形预览与气口剪辑参数" width="1440" height="900" fetchpriority="high"><span class="expand-hint" aria-hidden="true"><svg class="icon"><use href="#i-expand"/></svg></span></button>
         </div>
         <div class="workspace-caption"><p id="screen-caption">看见每一处停顿，保留表达的节奏。</p><span>SONICKIT WORKSPACE</span></div>
       </div>
@@ -76,6 +77,73 @@
         <article class="feature"><span class="feature-number">02</span><svg class="feature-icon icon"><use href="#i-wave"/></svg><h3>听感，恰到好处</h3><p>在波形上预览、调整气口，<br>批量转换音视频，识别并校对字幕。</p><span class="feature-note">气口剪辑 · 格式转换 · 字幕识别</span></article>
         <article class="feature"><span class="feature-number">03</span><svg class="feature-icon icon"><use href="#i-layers"/></svg><h3>素材，各就其位</h3><p>整理文案和音频，预览时间线，<br>把配音与文字衔接到 CapCut 草稿。</p><span class="feature-note">文案管理 · 音频库 · 草稿导入</span></article>
       </div>
+    </section>
+
+    <section class="voices wrap" id="voices" aria-labelledby="voices-title">
+      <div class="section-heading"><div><p class="eyebrow section-eyebrow">FIND YOUR VOICE.</p><h2 id="voices-title">先听见，<br>再选择。</h2></div><p class="section-description">4 种配音模型，10 个不同音色。<br>点击播放，听一段真实的模型试听。</p></div>
+      <div class="voice-grid">
+        <article class="voice-card">
+          <div class="voice-card-top"><span class="voice-model">Kokoro</span><span class="voice-number" aria-hidden="true">01</span></div>
+          <div class="voice-identity"><span class="voice-avatar" aria-hidden="true"><svg class="icon"><use href="#i-wave"/></svg></span><div><h3 id="voice-kokoro-xiaoxiao">晓晓</h3><p>中文<span aria-hidden="true"> · </span>女声</p></div></div>
+          <audio class="voice-audio" controls preload="none" src="audio/kokoro-xiaoxiao.wav" aria-labelledby="voice-kokoro-xiaoxiao">你的浏览器不支持音频播放，<a href="audio/kokoro-xiaoxiao.wav">下载试听音频</a>。</audio>
+          <p class="voice-error" role="status" hidden>音频暂时无法播放，请刷新后重试。</p>
+        </article>
+        <article class="voice-card">
+          <div class="voice-card-top"><span class="voice-model">Kokoro</span><span class="voice-number" aria-hidden="true">02</span></div>
+          <div class="voice-identity"><span class="voice-avatar" aria-hidden="true"><svg class="icon"><use href="#i-wave"/></svg></span><div><h3 id="voice-kokoro-yunxi">云希</h3><p>中文<span aria-hidden="true"> · </span>男声</p></div></div>
+          <audio class="voice-audio" controls preload="none" src="audio/kokoro-yunxi.wav" aria-labelledby="voice-kokoro-yunxi">你的浏览器不支持音频播放，<a href="audio/kokoro-yunxi.wav">下载试听音频</a>。</audio>
+          <p class="voice-error" role="status" hidden>音频暂时无法播放，请刷新后重试。</p>
+        </article>
+        <article class="voice-card">
+          <div class="voice-card-top"><span class="voice-model">Kokoro</span><span class="voice-number" aria-hidden="true">03</span></div>
+          <div class="voice-identity"><span class="voice-avatar" aria-hidden="true"><svg class="icon"><use href="#i-wave"/></svg></span><div><h3 id="voice-kokoro-heart">Heart</h3><p>英语<span aria-hidden="true"> · </span>女声</p></div></div>
+          <audio class="voice-audio" controls preload="none" src="audio/kokoro-heart.wav" aria-labelledby="voice-kokoro-heart">你的浏览器不支持音频播放，<a href="audio/kokoro-heart.wav">下载试听音频</a>。</audio>
+          <p class="voice-error" role="status" hidden>音频暂时无法播放，请刷新后重试。</p>
+        </article>
+        <article class="voice-card">
+          <div class="voice-card-top"><span class="voice-model">OmniVoice Q8</span><span class="voice-number" aria-hidden="true">04</span></div>
+          <div class="voice-identity"><span class="voice-avatar" aria-hidden="true"><svg class="icon"><use href="#i-wave"/></svg></span><div><h3 id="voice-omnivoice-female-01">female_01</h3><p>中文<span aria-hidden="true"> · </span>女声</p></div></div>
+          <audio class="voice-audio" controls preload="none" src="audio/omnivoice-female-01.wav" aria-labelledby="voice-omnivoice-female-01">你的浏览器不支持音频播放，<a href="audio/omnivoice-female-01.wav">下载试听音频</a>。</audio>
+          <p class="voice-error" role="status" hidden>音频暂时无法播放，请刷新后重试。</p>
+        </article>
+        <article class="voice-card">
+          <div class="voice-card-top"><span class="voice-model">OmniVoice Q8</span><span class="voice-number" aria-hidden="true">05</span></div>
+          <div class="voice-identity"><span class="voice-avatar" aria-hidden="true"><svg class="icon"><use href="#i-wave"/></svg></span><div><h3 id="voice-omnivoice-male-01">male_01</h3><p>中文<span aria-hidden="true"> · </span>男声</p></div></div>
+          <audio class="voice-audio" controls preload="none" src="audio/omnivoice-male-01.wav" aria-labelledby="voice-omnivoice-male-01">你的浏览器不支持音频播放，<a href="audio/omnivoice-male-01.wav">下载试听音频</a>。</audio>
+          <p class="voice-error" role="status" hidden>音频暂时无法播放，请刷新后重试。</p>
+        </article>
+        <article class="voice-card">
+          <div class="voice-card-top"><span class="voice-model">MOSS-TTS-Nano</span><span class="voice-number" aria-hidden="true">06</span></div>
+          <div class="voice-identity"><span class="voice-avatar" aria-hidden="true"><svg class="icon"><use href="#i-wave"/></svg></span><div><h3 id="voice-moss-lingyu">Lingyu</h3><p>中文<span aria-hidden="true"> · </span>女声</p></div></div>
+          <audio class="voice-audio" controls preload="none" src="audio/moss-lingyu.wav" aria-labelledby="voice-moss-lingyu">你的浏览器不支持音频播放，<a href="audio/moss-lingyu.wav">下载试听音频</a>。</audio>
+          <p class="voice-error" role="status" hidden>音频暂时无法播放，请刷新后重试。</p>
+        </article>
+        <article class="voice-card">
+          <div class="voice-card-top"><span class="voice-model">MOSS-TTS-Nano</span><span class="voice-number" aria-hidden="true">07</span></div>
+          <div class="voice-identity"><span class="voice-avatar" aria-hidden="true"><svg class="icon"><use href="#i-wave"/></svg></span><div><h3 id="voice-moss-xiaoyu">Xiaoyu</h3><p>中文<span aria-hidden="true"> · </span>女声</p></div></div>
+          <audio class="voice-audio" controls preload="none" src="audio/moss-xiaoyu.wav" aria-labelledby="voice-moss-xiaoyu">你的浏览器不支持音频播放，<a href="audio/moss-xiaoyu.wav">下载试听音频</a>。</audio>
+          <p class="voice-error" role="status" hidden>音频暂时无法播放，请刷新后重试。</p>
+        </article>
+        <article class="voice-card">
+          <div class="voice-card-top"><span class="voice-model">MOSS-TTS-Nano</span><span class="voice-number" aria-hidden="true">08</span></div>
+          <div class="voice-identity"><span class="voice-avatar" aria-hidden="true"><svg class="icon"><use href="#i-wave"/></svg></span><div><h3 id="voice-moss-junhao">Junhao</h3><p>中文<span aria-hidden="true"> · </span>男声</p></div></div>
+          <audio class="voice-audio" controls preload="none" src="audio/moss-junhao.wav" aria-labelledby="voice-moss-junhao">你的浏览器不支持音频播放，<a href="audio/moss-junhao.wav">下载试听音频</a>。</audio>
+          <p class="voice-error" role="status" hidden>音频暂时无法播放，请刷新后重试。</p>
+        </article>
+        <article class="voice-card">
+          <div class="voice-card-top"><span class="voice-model">Supertonic3</span><span class="voice-number" aria-hidden="true">09</span></div>
+          <div class="voice-identity"><span class="voice-avatar" aria-hidden="true"><svg class="icon"><use href="#i-wave"/></svg></span><div><h3 id="voice-supertonic-f1">F1</h3><p>英语<span aria-hidden="true"> · </span>女声</p></div></div>
+          <audio class="voice-audio" controls preload="none" src="audio/supertonic-f1.wav" aria-labelledby="voice-supertonic-f1">你的浏览器不支持音频播放，<a href="audio/supertonic-f1.wav">下载试听音频</a>。</audio>
+          <p class="voice-error" role="status" hidden>音频暂时无法播放，请刷新后重试。</p>
+        </article>
+        <article class="voice-card">
+          <div class="voice-card-top"><span class="voice-model">Supertonic3</span><span class="voice-number" aria-hidden="true">10</span></div>
+          <div class="voice-identity"><span class="voice-avatar" aria-hidden="true"><svg class="icon"><use href="#i-wave"/></svg></span><div><h3 id="voice-supertonic-m1">M1</h3><p>英语<span aria-hidden="true"> · </span>男声</p></div></div>
+          <audio class="voice-audio" controls preload="none" src="audio/supertonic-m1.wav" aria-labelledby="voice-supertonic-m1">你的浏览器不支持音频播放，<a href="audio/supertonic-m1.wav">下载试听音频</a>。</audio>
+          <p class="voice-error" role="status" hidden>音频暂时无法播放，请刷新后重试。</p>
+        </article>
+      </div>
+      <p class="voice-footnote">选自 SonicKit 已有模型的内置音色试听。不同模型及音色的表现各有特点，实际配音效果也会随文本、语言与参数变化。</p>
     </section>
 
     <section class="download-section" id="download" aria-labelledby="download-title">

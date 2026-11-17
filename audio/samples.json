@@ -1,0 +1,112 @@
+[
+  {
+    "id": "kokoro-xiaoxiao",
+    "name": "晓晓",
+    "model": "Kokoro",
+    "language": "中文",
+    "gender": "女声",
+    "src": "audio/kokoro-xiaoxiao.wav",
+    "duration": 2.543,
+    "sha256": "7e3d4b6614ea6003d87bca39ba20f95605c86617e9ae315be09a6b1194eab583",
+    "source": "kokoro/zf_xiaoxiao.wav"
+  },
+  {
+    "id": "kokoro-yunxi",
+    "name": "云希",
+    "model": "Kokoro",
+    "language": "中文",
+    "gender": "男声",
+    "src": "audio/kokoro-yunxi.wav",
+    "duration": 2.252,
+    "sha256": "ced8ea4252bf41eaad98b2fb4df5bf534fc7c53fb336c4aa165f04559ff3417f",
+    "source": "kokoro/zm_yunxi.wav"
+  },
+  {
+    "id": "kokoro-heart",
+    "name": "Heart",
+    "model": "Kokoro",
+    "language": "英语",
+    "gender": "女声",
+    "src": "audio/kokoro-heart.wav",
+    "duration": 2.294,
+    "sha256": "e590cb68689fd5c5e7e1ba3e333a0006fa6d3cdf3ae521d4a3a10afe431c22ae",
+    "source": "kokoro/af_heart.wav"
+  },
+  {
+    "id": "omnivoice-female-01",
+    "name": "female_01",
+    "model": "OmniVoice Q8",
+    "language": "中文",
+    "gender": "女声",
+    "src": "audio/omnivoice-female-01.wav",
+    "duration": 1.989,
+    "sha256": "a79e3a80b1ebc79db3eba78ad38b6cfb24a32eb2a96cabfaa2a58f0defa12f92",
+    "source": "OmniVoiceQ8/preset-female_01.wav"
+  },
+  {
+    "id": "omnivoice-male-01",
+    "name": "male_01",
+    "model": "OmniVoice Q8",
+    "language": "中文",
+    "gender": "男声",
+    "src": "audio/omnivoice-male-01.wav",
+    "duration": 2.567,
+    "sha256": "14c14533df86513c733421ec509077d041f77df344abc01fc3268e16b33b537e",
+    "source": "OmniVoiceQ8/preset-male_01.wav"
+  },
+  {
+    "id": "moss-lingyu",
+    "name": "Lingyu",
+    "model": "MOSS-TTS-Nano",
+    "language": "中文",
+    "gender": "女声",
+    "src": "audio/moss-lingyu.wav",
+    "duration": 2.704,
+    "sha256": "3726976a1deef797c497d66b524b457c62e69169af2c7b4c2fcc56e31a1920af",
+    "source": "MossTtsNano/moss-Lingyu.wav"
+  },
+  {
+    "id": "moss-xiaoyu",
+    "name": "Xiaoyu",
+    "model": "MOSS-TTS-Nano",
+    "language": "中文",
+    "gender": "女声",
+    "src": "audio/moss-xiaoyu.wav",
+    "duration": 2.535,
+    "sha256": "12ff48723351a450f64b5043e644587b0e1f647c34fcb03cd58470484b2abafa",
+    "source": "MossTtsNano/moss-Xiaoyu.wav"
+  },
+  {
+    "id": "moss-junhao",
+    "name": "Junhao",
+    "model": "MOSS-TTS-Nano",
+    "language": "中文",
+    "gender": "男声",
+    "src": "audio/moss-junhao.wav",
+    "duration": 2.239,
+    "sha256": "3f6b07281a0c577bc7808dfe4a7716f674ef77459cc84bb014c6e5e380206106",
+    "source": "MossTtsNano/moss-Junhao.wav"
+  },
+  {
+    "id": "supertonic-f1",
+    "name": "F1",
+    "model": "Supertonic3",
+    "language": "英语",
+    "gender": "女声",
+    "src": "audio/supertonic-f1.wav",
+    "duration": 2.195,
+    "sha256": "2bc8e8f655d1d5b6274c3c1bb37faec8fcb3a7b5d52906d1397036b26ff86c6d",
+    "source": "supertonic3/style-F1.wav"
+  },
+  {
+    "id": "supertonic-m1",
+    "name": "M1",
+    "model": "Supertonic3",
+    "language": "英语",
+    "gender": "男声",
+    "src": "audio/supertonic-m1.wav",
+    "duration": 2.17,
+    "sha256": "a79f4dd382f837b9b0b7d960ce3f40f9473fce65c661035108aaa3cc58191dda",
+    "source": "supertonic3/style-M1.wav"
+  }
+]

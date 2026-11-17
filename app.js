@@ -1,10 +1,10 @@
 import { fetchLatest, RELEASES_URL } from "./releases.js";
 
 const screens = {
-  audio: { src: "images/01-audio.png", title: "音频剪辑", alt: "SonicKit 音频剪辑界面，包含文件列表、波形预览与气口剪辑参数", caption: "看见每一处停顿，保留表达的节奏。" },
-  generation: { src: "images/04-generation.png", title: "AI 配音", alt: "SonicKit AI 配音界面，包含音色选择、朗读参数与音频库", caption: "选择合适的声音，让文字自然表达。" },
-  subtitles: { src: "images/02-subtitles.png", title: "字幕识别", alt: "SonicKit 字幕识别界面，包含字幕编辑、波形定位与导出入口", caption: "从听见，到看见，字幕与素材相伴。" },
-  drafts: { src: "images/10-draft-import.png", title: "草稿管理", alt: "SonicKit 草稿音频导入界面，包含音频库、导入参数与 CapCut 时间线", caption: "把配音与文字，放进故事的时间线。" }
+  audio: { src: "images/01-audio.png?v=20261117", title: "音频剪辑", alt: "SonicKit 音频剪辑界面，包含文件列表、波形预览与气口剪辑参数", caption: "看见每一处停顿，保留表达的节奏。" },
+  generation: { src: "images/04-generation.png?v=20261117", title: "AI 配音", alt: "SonicKit AI 配音界面，包含音色选择、朗读参数与音频库", caption: "选择合适的声音，让文字自然表达。" },
+  subtitles: { src: "images/02-subtitles.png?v=20261117", title: "字幕识别", alt: "SonicKit 字幕识别界面，包含字幕编辑、波形定位与导出入口", caption: "从听见，到看见，字幕与素材相伴。" },
+  drafts: { src: "images/10-draft-import.png?v=20261117", title: "草稿管理", alt: "SonicKit 草稿音频导入界面，包含音频库、导入参数与 CapCut 时间线", caption: "把配音与文字，放进故事的时间线。" }
 };
 const tabs = [...document.querySelectorAll("[data-screen]")];
 const image = document.getElementById("screen-image");

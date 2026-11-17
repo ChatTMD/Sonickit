@@ -2,17 +2,21 @@
 from __future__ import annotations
 
 import importlib.util
+import hashlib
 import json
 import os
 import re
 import subprocess
+import struct
 import sys
 import threading
 import unittest
+import wave
 import urllib.error
 import urllib.request
 from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -69,12 +73,13 @@ class WebsiteChecks(unittest.TestCase):
             if ref.startswith("#"):
                 self.assertIn(ref[1:], page.ids)
             else:
-                self.assertTrue((ROOT / ref).is_file(), ref)
+                self.assertTrue((ROOT / urlsplit(ref).path).is_file(), ref)
         readme = (ROOT / "README.md").read_text(encoding="utf-8-sig")
         for image in re.findall(r'(?:!\[[^\]]*\]\(|src=")(images/[^)"\s]+)', readme):
             self.assertTrue((ROOT / image).is_file(), image)
         app = (ROOT / "app.js").read_text(encoding="utf-8")
         for image in re.findall(r'src: "(images/[^"]+)"', app):
+            image = urlsplit(image).path
             self.assertTrue((ROOT / image).is_file())
             self.assertIn(image, readme)
         self.assertIn("https://www.sonickit.top/", source)
@@ -113,6 +118,36 @@ class WebsiteChecks(unittest.TestCase):
         self.assertEqual(task["runOptions"]["instanceLimit"], 1)
         self.assertNotIn("dependsOn", task)
         self.assertNotIn("build", json.dumps(task))
+
+    def test_voice_samples_are_complete_and_unchanged(self):
+        samples = json.loads((ROOT / "audio/samples.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(samples), 10)
+        self.assertEqual(len({sample["id"] for sample in samples}), 10)
+        self.assertEqual({sample["model"] for sample in samples},
+                         {"Kokoro", "OmniVoice Q8", "MOSS-TTS-Nano", "Supertonic3"})
+        source = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertEqual(source.count('class="voice-audio"'), 10)
+        self.assertEqual(source.count('controls preload="none"'), 10)
+        self.assertNotIn("autoplay", source)
+        for sample in samples:
+            path = ROOT / sample["src"]
+            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), sample["sha256"])
+            self.assertIn(f'src="{sample["src"]}"', source)
+            with wave.open(str(path)) as audio:
+                self.assertGreater(audio.getnframes(), 0)
+                self.assertAlmostEqual(audio.getnframes() / audio.getframerate(), sample["duration"], places=2)
+            with urllib.request.urlopen(self.base + "/" + sample["src"]) as response:
+                self.assertIn(response.headers.get_content_type(), {"audio/wav", "audio/x-wav", "audio/vnd.wave"})
+                self.assertEqual(hashlib.sha256(response.read()).hexdigest(), sample["sha256"])
+
+    def test_current_screenshot_inventory(self):
+        inventory = json.loads((ROOT / "images/screenshots.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(inventory["screens"]), 10)
+        for screen in inventory["screens"]:
+            data = (ROOT / screen["src"]).read_bytes()
+            self.assertEqual(data[:8], b"\x89PNG\r\n\x1a\n")
+            self.assertEqual(struct.unpack(">II", data[16:24]), (screen["width"], screen["height"]))
+            self.assertEqual(hashlib.sha256(data).hexdigest(), screen["sha256"])
 
 
 if __name__ == "__main__":
